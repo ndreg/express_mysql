@@ -1,0 +1,15 @@
+head
+	title Usuarios
+body
+	header
+		h1 Actualizar usuario 0#{user.id}
+	main
+		ul
+			li: a(href="/user/all") Atras 
+
+		form(action=`/user/update/${user.id}` method="POST")
+			input(type="text" name="name" placeholder="Ingresa el nuevo nombre" id="name" value=`${user.name}`)
+			input(type="number" name="age" placeholder="Ingresa la nueva edad" id="age" value=`${user.age}`)
+			input(type="submit" value="Crear")
+	footer
+		p Todos los derechos reservados, creo.

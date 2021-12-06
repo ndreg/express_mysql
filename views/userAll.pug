@@ -1,0 +1,23 @@
+head
+	title Usuarios
+body
+	header
+		h1 Mostrando todos los usuarios
+	main
+		ul
+			li: a(href="/") Ir a inicio
+			li: a(href="/user/add") Agregar Usuario
+		table
+			tr
+				th ID
+				th NOMBRE
+				th EDAD
+			each val in user
+				tr
+					th= val.id
+					th= val.name
+					th= val.age
+					th: a(href=`/user/update/${val.id}`) Editar
+					th: a(href=`/user/delete/${val.id}`) Eliminar
+	footer
+		p Todos los derechos reservados, creo.

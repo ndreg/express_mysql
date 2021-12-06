@@ -1,0 +1,12 @@
+head
+	title Usuarios
+body
+	header
+		h1 Eliminar usuario 0#{user.id}
+	main
+		form(action=`/user/delete/${user.id}` method="POST")
+			p Desea eliminar al usuario #{user.name}?
+			a(href="/user/all") Cancelar
+			input(type="submit" value="Borrar usuario")
+	footer
+		p Todos los derechos reservados, creo.
